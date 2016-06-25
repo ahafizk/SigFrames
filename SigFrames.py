@@ -16,8 +16,8 @@ def generate_frames(signal,frame_length, step):
     num_frames = get_numframes(siglen, frame_length,step)
     #add padding into rest of the frames when partial signal exists
     pad_length = int((num_frames - 1) * step + frame_length)
-    print pad_length
-    print siglen
+    # print pad_length
+    # print siglen
     psignal = np.concatenate((signal,np.zeros((pad_length-siglen,))))
     #generate index for all the frames using first frames signals indices
     first_frame_index_array = np.tile(np.arange(0, frame_length), (num_frames, 1))
