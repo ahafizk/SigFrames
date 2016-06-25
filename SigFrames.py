@@ -62,7 +62,7 @@ if __name__=='__main__':
     sig_2d = np.array([[1,2,3,4,5,6,7,8,9],[9,8,7,6,5,4,3,2,1],[1,4,7,2,5,8,3,6,9]])
     frame_length = 4
     step = 2
-    print sig_2d
+    print generate_frames_1D(sig,frame_length,step)
     frames = generate_frames_2D(sig_2d,frame_length,step)
     print frames[0].T
     print frames[1].T
